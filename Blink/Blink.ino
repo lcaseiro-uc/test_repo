@@ -28,6 +28,7 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LEDpin, OUTPUT);
   SerialBegin(9600);
+  SerialPrint("Started");
 }
 
 // the loop function runs over and over again forever
