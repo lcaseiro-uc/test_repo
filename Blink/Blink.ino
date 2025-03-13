@@ -21,18 +21,22 @@
 
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
 */
-#define LEDpin 3
+#define LED 3
+#define LED2 4
 
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LEDpin, OUTPUT);
+  pinMode(LED, OUTPUT);
+  pinMode(LED2, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LEDpin, HIGH);  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(LED, HIGH);  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(LED2, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(1000);                      // wait for a second
-  digitalWrite(LEDpin, LOW);   // turn the LED off by making the voltage LOW
+  digitalWrite(LED, LOW);   // turn the LED off by making the voltage LOW
+  digitalWrite(LED2, LOW);   // turn the LED off by making the voltage LOW
   delay(1000);                      // wait for a second
 }
