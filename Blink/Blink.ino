@@ -29,13 +29,17 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED, OUTPUT);
   pinMode(LED2, OUTPUT);
+  SerialBegin(9600);
+  SerialPrint("Started");
 }
 
 // the loop function runs over and over again forever
 void loop() {
+  SerialPrint("ON");
   digitalWrite(LED, HIGH);  // turn the LED on (HIGH is the voltage level)
   digitalWrite(LED2, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(1000);                      // wait for a second
+  SerialPrint("OFF");
   digitalWrite(LED, LOW);   // turn the LED off by making the voltage LOW
   digitalWrite(LED2, LOW);   // turn the LED off by making the voltage LOW
   delay(1000);                      // wait for a second
